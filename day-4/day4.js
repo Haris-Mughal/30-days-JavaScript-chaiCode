@@ -1,10 +1,15 @@
 // Activity 1: For Loop
 // Task 1:
+console.log(`\ntask 1:`);
+
 let forwardCount = 1;
 
 for ( forwardCount; forwardCount <= 10; forwardCount++ ) {
     console.log(`\n${forwardCount}`)
 }
+
+console.log(`\n\n`);
+console.log(`task 2:`);
 
 // Task 2:
 let number = 1;
@@ -15,6 +20,8 @@ for ( number; number <= 10; number++ ) {
     console.log(`\n${table}`)
 }
 
+console.log(`\n\n`);
+console.log(`task 3:`);
 
 // Activity 2: While Loop
 // Task 3:
@@ -27,6 +34,8 @@ while ( count <= 10 ) {
 }
 
 console.log(`\nThe sum of numbers from 1 to 10 is: ${sum}`)
+console.log(`\n\n`);
+console.log(`task 4:`);
 
 // Task 4:
 let reverseCount = 10;
@@ -37,6 +46,8 @@ while ( reverseCount >= 1 ) {
     reverseCount--
 }
 
+console.log(`\n\n`);
+console.log(`task 5:`);
 
 // Activity 3: Do... While Loop
 // Task 5:
@@ -48,6 +59,8 @@ do {
     numb++
 
 } while ( numb <= 5 );
+console.log(`\n\n`);
+console.log(`task 6:`);
 
 // Task 6:
 let factorial = 5;
@@ -61,6 +74,8 @@ do {
 } while ( factorial > 0 );
 
 console.log(`\nFactorial of ${value} is ${result}`);
+console.log(`\n\n`);
+console.log(`task 7:`);
 
 
 // Activity 4: Nested Loop 
@@ -78,6 +93,8 @@ for ( num; num <= 5; num++ ) {
 
     console.log(`\n${star}`);
 }
+console.log(`\n\n`);
+console.log(`task 8:`);
 
 
 // Activity 5: Loop Control Statements
@@ -91,8 +108,10 @@ for ( skipNumber; skipNumber <= 10; skipNumber++ ) {
     
     console.log(`${skipNumber}`);
 }
+console.log(`\n\n`);
+console.log(`task 9:`);
 
-// Task 8:
+// Task 9:
 let stopNumber = 1;
 
 for ( stopNumber; stopNumber <= 10; stopNumber++ ) {
