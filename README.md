@@ -1,4 +1,5 @@
-## JavaScript Challenge by Sir Hitesh Chaudhary 
+## [30-Days-JavaScript-Challenge by Hitesh Choudhary](https://courses.chaicode.com/learn/home) 
+<br/>
 
 Welcome to my repository! This private repository documents my journey through the JavaScript challenge by Hitesh Sir. As part of his course, I have committed to daily uploads and detailed reflections on my progress and experiences.
 
