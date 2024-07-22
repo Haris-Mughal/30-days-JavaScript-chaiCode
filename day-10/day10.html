@@ -1,0 +1,128 @@
+// Activity 1: Basic Event Handling
+// Task 1: 
+<button id="changeTextButton">Change Text</button>
+<p id="textParagraph">Original Text</p>
+
+<script>
+  document.getElementById('changeTextButton').addEventListener('click', function() {
+    document.getElementById('textParagraph').textContent = 'Text has been changed!';
+  });
+</script>
+
+// Task 2: 
+<img id="imageToggle" src="haris.jpg" alt="Image">
+
+<script>
+  document.getElementById("imageToggle").addEventListener("dblclick", function() {
+    this.style.display = this.style.display === "none" ? "block" : "none";
+  })
+</script>
+
+
+// Activity 2: Mouse Events
+// Task 3: 
+<div id="mousehover" style="width: 100px; height: 100px; background-color: lightgreen;">Hover over me</div>
+
+<script>
+  document.getElementById("mousehover").addEventListener("mouseover", function() {
+    this.style.backgroundColor = "green";
+  })
+</script>
+
+// Task 4: 
+<script>
+  document.getElementById("mousehover").addEventListener("mouseout", function() {
+    this.style.backgroundColor = 'lightgreen';
+  })
+</script>
+
+
+// Activity 3: Keyboard Events
+// Task 5: 
+<input type="text" id="keydownInpt">
+
+<script>
+  document.getElementById("keydownInpt").addEventListener("keydown", function(event) {
+    console.log('Key Pressed: ', event.key );
+  })
+</script>
+
+// Task 6: 
+<input type="text" id="keyupInpt">
+<p id="keyupVal"></p>
+
+<script>
+  document.getElementById("keyupInpt").addEventListener("keyup", function() {
+    document.getElementById("keyupVal").textContent = this.value;
+  })
+</script>
+
+
+// Activity 4: Form Events
+// Task 7: 
+<form id="submitForm">
+  <input type="text" name="username" placeholder="Username">
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  document.getElementById("submitForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const dataForm = new FormData(this);
+    console.log('Form Data: ', Object.fromEntries(dataForm.entries()));
+  })
+</script>
+
+// Task 8: 
+<select id="dropdown">
+  <option value="option 1">Option 1</option>
+  <option value="option 2">Option 2</option>
+  <option value="option 3">Option 3</option>
+</select>
+<p id="selectVal"></p>
+
+<script>
+  document.getElementById("dropdown").addEventListener("change", function() { 
+    document.getElementById("selectVal").textContent = this.value;
+  })
+</script>
+
+
+// Activity 5: Event Delegation
+// Task 9: 
+<ul id="clickList">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+
+<script>
+  document.getElementById("clickList").addEventListener("click", function(event) {
+    if (event.target.tagname === "li") {
+      console.log(event.target.textContent);
+    }
+  })
+</script>
+
+// Task 10:
+<div id="parent">
+  <button id="addChild">Add Child</button>
+</div>
+
+<script>
+  // append child
+  document.getElementById("parent").addEventListener("click", function(event) {
+    if (event.target.classList.contains("child")) {
+      console.log('Click child element: ', event.target.textContent );
+    }
+  })
+
+  // declare child
+  document.getElementById("addChild").addEventListener("click", function() {
+    const newChild = document.createElement("div");
+    newChild.classList.add("child");
+    newChild.textContent = "I'm a new Child";
+
+    document.getElementById("parent").appendChild(newChild);
+  })
+</script>
